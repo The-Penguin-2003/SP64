@@ -2,7 +2,7 @@ AS = nasm
 ASFLAGS = -w+all -f bin
 
 VM = qemu-system-x86_64
-VMFLAGS = -fda SP64.img
+VMFLAGS = -enable-kvm -cpu host -vga std -fda SP64.img
 
 .PHONY: all disk run clean
 
